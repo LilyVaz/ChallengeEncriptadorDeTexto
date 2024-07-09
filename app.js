@@ -60,6 +60,5 @@ function displayDecryptedText(decryptedText) {
 function copyToClipboard() {
     let outputText = document.getElementById("output-text");
     outputText.select();
-    document.execCommand("copy");
-    alert("Texto copiado al portapapeles");
+    alert("Texto copiado");
 }
