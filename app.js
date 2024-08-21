@@ -1,5 +1,3 @@
-// scripts.js
-
 document.getElementById("encrypt-btn").addEventListener("click", handleEncrypt);
 document.getElementById("decrypt-btn").addEventListener("click", handleDecrypt);
 document.getElementById("copy-btn").addEventListener("click", copyToClipboard);
@@ -50,15 +48,22 @@ function validateText(text) {
 }
 
 function displayEncryptedText(encryptedText) {
-    document.getElementById("output-text").value = encryptedText;
+    document.getElementById("output-image").style.display = 'none'; // Esconde la imagen
+    document.getElementById("output-text").style.display = 'block'; // Muestra el texto encriptado
+    document.getElementById("output-text").value = encryptedText;   // Asigna el valor encriptado al área de texto
+    document.getElementById("copy-btn").style.display = 'block';    // Muestra el botón de copiar
 }
 
 function displayDecryptedText(decryptedText) {
-    document.getElementById("output-text").value = decryptedText;
+    document.getElementById("output-image").style.display = 'none'; // Esconde la imagen
+    document.getElementById("output-text").style.display = 'block'; // Muestra el texto desencriptado
+    document.getElementById("output-text").value = decryptedText;   // Asigna el valor desencriptado al área de texto
+    document.getElementById("copy-btn").style.display = 'block';    // Muestra el botón de copiar
 }
 
 function copyToClipboard() {
     let outputText = document.getElementById("output-text");
     outputText.select();
-    alert("Texto copiado");
+    document.execCommand("copy");
+    alert("Texto copiado al portapapeles");
 }

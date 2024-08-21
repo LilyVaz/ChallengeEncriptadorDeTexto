@@ -9,25 +9,21 @@
 </head>
 <body>
     <main class="all">
-        <div class="container">
-            <h1>Encriptador de Texto</h1>
-            <div class="flex-container">
-                <div class="input-section" >
-                    <input id="input-text" placeholder="Ingrese el texto aquí..."/>
-                    <div class="buttons">
-                        <button id="encrypt-btn">Encriptar</button>
-                        <button id="decrypt-btn">Desencriptar</button>
-                    </div>
-                </div>
-                <div class="output-section">
-                    <textarea id="output-text" readonly placeholder="Texto cifrado/descifrado aparecerá aquí..."></textarea>
-                    <button id="copy-btn">Copiar</button>
-                </div>
+        <div class="input-section">
+            <textarea id="input-text" placeholder="Ingrese el texto aquí..."></textarea>
+            <p id="message">Solo letras minúsculas y sin acentos</p>
+            <div class="buttons">
+                <button id="encrypt-btn">Encriptar</button>
+                <button id="decrypt-btn">Desencriptar</button>
             </div>
-            <p id="message"></p>
         </div>
+        <div class="output-section">
+            <img id="output-image" src="styles/img/imagen.JPG" >
+            <textarea id="output-text" readonly style="display:none;"></textarea>
+            <button id="copy-btn" style="display:none;">Copiar</button>
+        </div>
+       
     </main>
-    
     <footer>
         Desarrollado por Martha Lilian Vasquez Portillo
     </footer>
